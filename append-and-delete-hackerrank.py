@@ -1,3 +1,14 @@
+# *********** Problem Statement ***********************
+"""
+Given two strings "s" & "t" and an integer k. 
+Need to convert "s" to "t" by performing exactly k no. of operation.
+If possible return "YES" otherwise "NO".
+
+
+"""
+
+#************* Solution ****************************
+
 """
 #!/bin/python3
 
@@ -359,8 +370,6 @@ s = input()
 t = input()
 k = int(input().strip())
 
-
-
 def appendAndDelete(s, t, k):
     if len(s) + len(t) <= k:
         # return 'Yes'
@@ -381,3 +390,36 @@ def appendAndDelete(s, t, k):
         print("No")
     
 appendAndDelete(s, t, k)
+
+
+"""
+s = input()
+t = input()
+k = int(input().strip())
+
+# s = [a,b,c]
+# t = [d,e,f]
+# k = 6
+
+def appendAndDelete(s, t, k):
+    if len(s) + len(t) <= k:
+        # return 'Yes'
+        print("Yes")
+    
+    else:
+        t = list(t)
+        s = list(s)
+        for i in range(k):
+            if len(t) > len(s):
+                t.pop()
+            else:
+                s.pop()
+        if s == t:
+            return 'Yes'
+            # print("Yes")
+        # return 'No'
+        print("No")
+    
+appendAndDelete(s, t, k)
+
+"""

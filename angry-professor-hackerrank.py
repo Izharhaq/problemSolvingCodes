@@ -1,3 +1,14 @@
+# ******** Problem Statement ***********************
+"""
+Professor will cancel a class if students come late....
+a[i]<= 0 --> On time,  a[i] --> late
+return "YES" if class is canceled otherwise "NO".
+k=3, a=[-2,-1,0,1,2] -->> 3 students are on time so it will return NO
+"""
+
+#*******************************************************
+ 
+#****** Solution *******************
 """
 #!/bin/python3
 
@@ -154,3 +165,4 @@ def angryProfessor(k, a):
         else: 
             return "YES"
 """
+
