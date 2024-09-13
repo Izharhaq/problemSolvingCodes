@@ -1,9 +1,10 @@
 # ******** Problem Statement ***********************
 # ******** Problem Statement ***********************
-
-
-
-
+"""
+Given two houses located at positions `s` and `t`, and two trees producing apples and oranges,
+determine how many apples fall within the range of the first house and 
+how many oranges fall within the range of the second house.
+"""
 
 
 #*****************************************************

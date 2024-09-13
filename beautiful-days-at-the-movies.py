@@ -1,4 +1,31 @@
 """
+Problem Description:
+You are given a range of days, and for each day, you need to determine whether it's a "beautiful day." 
+A day is considered "beautiful" if the absolute difference between the day and 
+its reverse is divisible by a given integer k.
+
+Input:
+A starting day i
+An ending day j
+A divisor k
+
+Output:
+The number of "beautiful days" in the given range [i, j].
+
+Steps to Solve:
+1. Reverse the number: For each day between i and j (inclusive), 
+   reverse the digits of the day. For example, if the day is 123, the reverse is 321.
+
+2. Calculate the difference: Compute the absolute difference between the original day and its reverse.
+
+3. Check divisibility: Check if the absolute difference is divisible by k. If yes, it's a "beautiful day."
+
+4. Count the number of beautiful days: Keep track of how many days satisfy the condition.
+"""
+
+
+##****************** Solution *****************
+"""
 #!/bin/python3
 
 import math

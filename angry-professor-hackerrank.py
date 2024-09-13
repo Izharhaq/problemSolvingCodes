@@ -1,13 +1,11 @@
 # ******** Problem Statement ***********************
-# ******** Problem Statement ***********************
 """
 Professor will cancel a class if students come late....
 a[i]<= 0 --> On time,  a[i] --> late
 return "YES" if class is canceled otherwise "NO".
-k=3, a=[-2,-1,0,1,2] -->> 3 students are on time so it will return NO
+k=3 (Minimum students reuired to run class) , 
+a=[-2,-1,0,1,2] -->> 3 students are on time so it will return NO
 """
-
-#*******************************************************
  
 #****** Solution *******************
 """
@@ -63,7 +61,8 @@ if __name__ == '__main__':
     fptr.close()
 
 """
-
+#*************** Logic-2 ***************
+"""
 first_multiple_input = input().rstrip().split()
 n = int(first_multiple_input[0])
 k = int(first_multiple_input[1])
@@ -87,15 +86,8 @@ def angryProfessor(k, a):
             # return "YES"
             print("YES")
 
-
-    # if len(students_on_time) >= k:
-    #     print("NO")
-    #     # return "NO"
-    # else:
-    #     print("YES")
-    #     # return  "YES"
-
 angryProfessor(k, a)
+"""
 
 """
 ##***submitted earlier **
@@ -110,6 +102,7 @@ students_on_time = []
 
 
 """
+
 """
 def angryProfessor(threshold, arrivalTimes):
     

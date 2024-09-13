@@ -1,3 +1,39 @@
+#***************** Problem ************
+"""
+Problem Description:
+You are given an integer array arr and a number d. 
+A "beautiful triplet" is defined as a tuple of indices (i, j, k) where:
+
+i < j < k
+arr[j] - arr[i] = d
+arr[k] - arr[j] = d
+In other words, the values at those indices form an arithmetic progression with 
+a common difference d. Your task is to count how many such "beautiful triplets" exist in the array.
+
+Input:
+n: The number of elements in the array arr
+d: The common difference
+arr: The array of integers
+Output:
+An integer representing the number of beautiful triplets found in the array.
+Steps to Solve:
+Identify Triplets: A triplet consists of three values from the array such that 
+the second value minus the first value equals d, and the third value minus the second value equals d. 
+This implies:
+
+arr[j] - arr[i] = d
+arr[k] - arr[j] = d
+In other words:
+
+arr[k] = arr[j] + d
+arr[j] = arr[i] + d
+Loop Through the Array: For each element in the array, 
+look for pairs that meet the conditions of a beautiful triplet.
+
+Count Valid Triplets: Every time you find a valid triplet, increment a counter.
+"""
+
+#***************** Solution ************
 """
 #!/bin/python3
 
