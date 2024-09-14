@@ -1,5 +1,5 @@
 # *********** Problem Statement ***********************
-# *********** Problem Statement ***********************
+
 """
 Given two strings "s" & "t" and an integer k. 
 Need to convert "s" to "t" by performing exactly k no. of operation.
@@ -7,7 +7,7 @@ If possible return "YES" otherwise "NO".
 
 """
 #************* Solution ****************************
-
+#*************** Logic-1 ***************
 """
 #!/bin/python3
 
@@ -79,6 +79,7 @@ if __name__ == '__main__':
 # appendAndDelete(s, t, k)
 
 
+#*************** Logic-2 ***************
 """
 def appendAndDelete(s, t, k):
     if k-len(s)>=len(t):
@@ -97,7 +98,7 @@ def appendAndDelete(s, t, k):
     return "No"
 """
 
-
+#*************** Logic-3 ***************
 """
 def appendAndDelete(s, t, k):
     i = 0 # index of first char in strings that dont match
@@ -116,7 +117,7 @@ def appendAndDelete(s, t, k):
         return "No"
 """
 
-
+#*************** Logic-4 ***************
 """
 def appendAndDelete(s, t, k):
     c,d=0,0
@@ -135,6 +136,7 @@ def appendAndDelete(s, t, k):
                 return 'No'
 """
 
+#*************** Logic-5 ***************
 """
 def appendAndDelete(s, t, k):
     common_length = 0
@@ -152,7 +154,7 @@ def appendAndDelete(s, t, k):
         return 'No'
 """
 
-
+#*************** Logic-6 ***************
 """
 def appendAndDelete(s, t, k):
     a = list(s)
@@ -168,6 +170,7 @@ def appendAndDelete(s, t, k):
     return "Yes" if a == b else "No"
 """
 
+#*************** Logic-7 ***************
 """
 def appendAndDelete(s, t, k):
     c,b=0,0
@@ -188,6 +191,7 @@ def appendAndDelete(s, t, k):
         return "No"
 """
 
+#*************** Logic-8 ***************
 """
 def appendAndDelete(s, t, k):
     common_prefix_length = 0
@@ -209,6 +213,7 @@ def appendAndDelete(s, t, k):
         return 'No'
 """
 
+#*************** Logic-9 ***************
 """
 def appendAndDelete(s, t, k):
     if len(s) + len(t) <= k:
@@ -226,6 +231,7 @@ def appendAndDelete(s, t, k):
         return 'No'
 """
 
+#*************** Logic-10 ***************
 """
 def appendAndDelete(s, t, k):
     if k > len(s) + len(t):
@@ -240,6 +246,7 @@ def appendAndDelete(s, t, k):
     return "Yes" if len(s) + len(t) <= k else "No"
 """
 
+#*************** Logic-11 ***************
 """
 def appendAndDelete(s, t, k):
     # Write your code here
@@ -261,6 +268,7 @@ def appendAndDelete(s, t, k):
     return "No"
 """
 
+#*************** Logic-12 ***************
 """
 def appendAndDelete(s, t, k):
     # Write your code here
@@ -290,7 +298,7 @@ def appendAndDelete(s, t, k):
     return "No"
 """
 
-
+#*************** Logic-13 ***************
 """
 def appendAndDelete(s, t, k):
     # Write your code here
@@ -320,6 +328,7 @@ def appendAndDelete(s, t, k):
     return "No"
 """
 
+#*************** Logic-14 ***************
 """
 def appendAndDelete(s, t, k):
     n = len(s)
@@ -346,6 +355,7 @@ def appendAndDelete(s, t, k):
         return "No"
 """
 
+#*************** Logic-15 ***************
 """
 def appendAndDelete(s, t, k):    
     diff = 0

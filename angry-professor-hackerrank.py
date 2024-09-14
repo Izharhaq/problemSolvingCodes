@@ -89,6 +89,7 @@ def angryProfessor(k, a):
 angryProfessor(k, a)
 """
 
+#*************** Logic-3 ***************
 """
 ##***submitted earlier **
 students_on_time = []
@@ -103,6 +104,7 @@ students_on_time = []
 
 """
 
+#*************** Logic-4 ***************
 """
 def angryProfessor(threshold, arrivalTimes):
     
@@ -116,18 +118,20 @@ def angryProfessor(threshold, arrivalTimes):
         return "YES"
 """
 
-
+#*************** Logic-5 ***************
 """
 def angryProfessor(k, a):
     # Write your code here
     return "NO" if len([student for student in a if student <= 0]) >= k else "YES"
 """
 
+#*************** Logic-6 ***************
 """
 def angryProfessor(k, a):
     return "NO" if sum(map(lambda x: x<=0, a))>=k else "YES"
 """
 
+#*************** Logic-7 ***************
 """
  arrival_times_str = list(map(str, a))
     
@@ -145,7 +149,7 @@ def angryProfessor(k, a):
         return "NO"
 """
 
-
+#*************** Logic-8 ***************
 """
 def angryProfessor(k, a):
     count=0 
