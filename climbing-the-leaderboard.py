@@ -18,6 +18,22 @@ import sys
 
 def climbingLeaderboard(ranked, player):
     # Write your code here
+    #***** IZHAR CODE *************
+    # Remove duplicates and keep the ranking in descending order
+    unique_scores = list(dict.fromkeys(ranked))  # Preserves order while removing duplicates
+    results = []
+    index = len(unique_scores)  # Start from the lowest rank
+    
+    for score in player:
+        # Move up the leaderboard while Alice's score is greater or equal
+        while index > 0 and score >= unique_scores[index - 1]:
+            index -= 1
+        # Alice's rank is index + 1 (since it's 1-based ranking)
+        results.append(index + 1)
+    
+    return results
+
+    #***** IZHAR CODE *************
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
