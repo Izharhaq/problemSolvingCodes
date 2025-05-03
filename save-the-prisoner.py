@@ -19,7 +19,10 @@ import sys
 
 def saveThePrisoner(n, m, s):
     # Write your code here
+    ##### IZHAR CODE ########
+    return ((s - 1 + m - 1) % n) + 1
 
+    #### IZHAR CODE #########
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
@@ -41,3 +44,27 @@ if __name__ == '__main__':
     fptr.close()
 
 """
+
+
+"""
+def saveThePrisoner(n, m, s):
+    position = s
+    for _ in range(m - 1):
+        position += 1
+        if position > n:
+            position = 1  # wrap around the circle
+    return position
+
+print(saveThePrisoner(7,19,2))  # Output: 6
+print(saveThePrisoner(3,7,3))  # Output: 3
+"""
+
+"""
+def saveThePrisoner(n, m, s):
+    return ((s - 1 + m - 1) % n) + 1
+print(saveThePrisoner(7,19,2))  # Output: 6
+print(saveThePrisoner(3,7,3))  # Output: 3
+"""
+
+
+
