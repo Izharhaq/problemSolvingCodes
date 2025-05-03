@@ -1,4 +1,23 @@
 """
+You are given a list of binary strings where each string represents the topics known by a participant (1 = knows the topic, 0 = doesn't). A team is formed by pairing any two participants. A team can solve a topic if either member knows it.
+
+Your task:
+Find the maximum number of topics a team can solve, and how many teams can solve that many topics.
+
+Input:
+
+n participants, each with a binary string of length m.
+
+Output:
+
+An array with two integers:
+
+Maximum number of topics any team can solve.
+
+Number of teams that can solve that many topics.
+"""
+
+"""
 #!/bin/python3
 
 import math
@@ -113,3 +132,5 @@ def acmTeam(topic):
 
 print(acmTeam(topic))
 """
+
+
