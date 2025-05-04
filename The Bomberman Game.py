@@ -1,0 +1,71 @@
+"""
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'bomberMan' function below.
+#
+# The function is expected to return a STRING_ARRAY.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. STRING_ARRAY grid
+#
+
+def bomberMan(n, grid):
+    # Write your code here
+    if n == 1:
+        return grid
+    
+    if n % 2 == 0:
+        return ['O'*c for i in range(r)]
+
+    def detonate_bombs(grid):
+        new_grid = [['O']*c for i in range(r)]
+        
+        for i in range(r):
+            for j in range(c):
+                if grid[i][j] == 'O':
+                    new_grid[i][j] = '.'
+                    for x, y in [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]:
+                        if 0<=x<r and 0<=y<c:
+                            new_grid[x][y] = '.'
+                            
+        return [''.join(row) for row in new_grid]
+    
+    n //= 2
+    for _ in range((n + 1) % 2 + 1):
+        new_grid = detonate_bombs(grid)
+        grid = new_grid
+        
+    return [''.join(row) for row in grid]
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    r = int(first_multiple_input[0])
+
+    c = int(first_multiple_input[1])
+
+    n = int(first_multiple_input[2])
+
+    grid = []
+
+    for _ in range(r):
+        grid_item = input()
+        grid.append(grid_item)
+
+    result = bomberMan(n, grid)
+
+    fptr.write('\n'.join(result))
+    fptr.write('\n')
+
+    fptr.close()
+
+"""
